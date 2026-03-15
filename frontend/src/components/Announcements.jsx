@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Megaphone, CalendarDays, RefreshCw, ArrowRight } from 'lucide-react';
+import API_BASE_URL from '../config';
 
 const Announcements = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -10,7 +11,7 @@ const Announcements = () => {
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/announcements');
+        const response = await fetch(`${API_BASE_URL}/api/announcements`);
         if (!response.ok) throw new Error('Failed to fetch announcements');
         const data = await response.json();
         setAnnouncements(data);

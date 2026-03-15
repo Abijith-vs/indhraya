@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Maximize2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+import API_BASE_URL from '../config';
+
 const Gallery = () => {
   const [galleryItems, setGalleryItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -9,7 +11,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/gallery');
+        const response = await fetch(`${API_BASE_URL}/api/gallery`);
         const data = await response.json();
         setGalleryItems(data);
       } catch (err) { console.error(err); } finally { setLoading(false); }
@@ -38,7 +40,7 @@ const Gallery = () => {
                 className="relative rounded-[2rem] overflow-hidden group cursor-none"
               >
                 <img
-                  src={`http://localhost:5000${image.imageUrl}`}
+                  src={`${API_BASE_URL}${image.imageUrl}`}
                   className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

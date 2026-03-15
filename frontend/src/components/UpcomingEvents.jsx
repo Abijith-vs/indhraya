@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, CalendarDays } from 'lucide-react';
 
+import API_BASE_URL from '../config';
+
 const UpcomingEvents = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -9,7 +11,7 @@ const UpcomingEvents = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/events');
+        const response = await fetch(`${API_BASE_URL}/api/events`);
         const data = await response.json();
         setEvents(data.slice(0, 3));
       } catch (err) { console.error(err); } finally { setLoading(false); }
@@ -45,7 +47,7 @@ const UpcomingEvents = () => {
                   {/* Image Section */}
                   <div className="w-full md:w-80 h-64 md:h-auto overflow-hidden relative">
                     <img
-                      src={`http://localhost:5000${event.posterImage}`}
+                      src={`${API_BASE_URL}${event.posterImage}`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-90"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 to-transparent" />
