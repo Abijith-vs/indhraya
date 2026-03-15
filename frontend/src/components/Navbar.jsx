@@ -12,14 +12,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      // const sections = ['home', 'union', 'college', 'events', 'gallery', 'complaints', 'announcements', 'contact'];
-      // for (let section of sections) {
-      //   const el = document.getElementById(section);
-      //   if (el && el.getBoundingClientRect().top < 100 && el.getBoundingClientRect().bottom > 100) {
-      //     setActiveSection(section);
-      //     break;
-      //   }
-      // }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -51,7 +43,7 @@ const Navbar = () => {
       {/* Desktop Logo */}
       <div className="hidden md:block absolute left-12 top-10 pointer-events-auto">
         <a href="/" className="text-xl font-bold text-white tracking-tighter">
-          NSSCE<span className="text-blue-500">.</span>UNION
+          <span className="text-blue-500">UNION</span>'26
         </a>
       </div>
 

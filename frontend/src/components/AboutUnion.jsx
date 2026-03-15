@@ -110,7 +110,7 @@ const AboutUnionComp = memo(() => {
                   <Heart className="text-white fill-white w-10 h-10 relative z-10" />
                   <div className="relative z-10">
                     <h4 className="text-2xl font-bold text-white mb-2 italic">Student Voice.</h4>
-                    <p className="text-blue-100 text-sm leading-tight">Representing the heartbeat of NSSCE since 1960.</p>
+                    <p className="text-blue-100 text-sm leading-tight">Representing the heartbeat of NSSCE </p>
                   </div>
                   {/* Visual background blob */}
                   <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />

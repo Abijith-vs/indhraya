@@ -27,8 +27,7 @@ const Gallery = () => {
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {!loading && galleryItems.length === 0 ? (
             <div className="text-center py-20 border border-white/5 rounded-[2.5rem] bg-zinc-900/20 backdrop-blur-sm md:col-span-3">
-              <p className="text-gray-500 text-lg">The gallery is currently being curated.</p>
-              <p className="text-gray-600 text-sm mt-2 font-light italic">Check back soon for memories from NSSCE.</p>
+              <p className="text-gray-500 text-center">The gallery is currently being curated.</p>
             </div>
           ) : (
             galleryItems.map((image) => (

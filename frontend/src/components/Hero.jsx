@@ -55,7 +55,7 @@ const Hero = () => {
                     <div className="flex flex-col items-start gap-2">
                         <div className="flex items-center">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/50">
-                                INDHRAYA
+                                INDRAYA
                             </span>
                         </div>
                         <span className="text-gray-500 italic font-light">COLLEGE UNION</span>
@@ -69,7 +69,7 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="text-gray-450 text-base md:text-lg max-w-lg font-light leading-relaxed mb-10"
                 >
-                    Together We Rise
+                    We Look Forward To Seeing You
                 </motion.p>
 
                 <motion.div
@@ -78,15 +78,12 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-wrap gap-4"
                 >
-                    <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
-                        Explore Union <ArrowRight size={20} />
-                    </button>
                     <button
                         onClick={() => document.getElementById('complaints')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full border border-white/10 backdrop-blur-sm transition-all transform hover:scale-105 active:scale-95"
-                    >
-                        Voice Grievance
+                        className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
+                        Voice Grievance <ArrowRight size={20} />
                     </button>
+                    
                 </motion.div>
 
             </div>

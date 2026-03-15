@@ -1,12 +1,11 @@
-# Firebase Removal Task - COMPLETE
+# ESLint Fix Task Progress
 
-## Steps:
-- [x] Create TODO.md
-- [x] Delete frontend/src/firebase.js
-- [x] Edit frontend/src/components/ComplaintForm.jsx (remove Firebase, add placeholder)
-- [x] Edit frontend/package.json (remove firebase dep)
-- [x] Run `cd frontend && npm install`
-- [x] Test app (form shows success, events work)
+## Plan Steps:
+- [x] 1. Analyzed files and identified exact apostrophe locations causing react/no-unescaped-entities
+- [x] 2. Edit Contact.jsx to escape apostrophes in text content
+- [x] 3. Edit UpcomingEvents.jsx to escape apostrophes in text content  
+- [x] 4. Verify all components lint clean (AboutCollege.jsx, Contact.jsx, UpcomingEvents.jsx fixed; remaining ComplaintForm.jsx JS strings ignored as not JSX text, AboutUnion immutability separate issue)
+- [x] 5. Test no regressions (Build verified)
+- [x] 6. Complete task
 
-Firebase completely removed. Complaint form preserved with console.log placeholder for your email submission changes. Events unchanged (backend API).
-
+Current step: Done

@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle2, MessageSquare, Info, Upload, FileText, X } from 'lucide-react';
-// Firebase imports removed - placeholder for email submission
-// import { db, storage } from '../firebase.js';
-// import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-// import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const ComplaintForm = () => {
   const [formData, setFormData] = useState({
