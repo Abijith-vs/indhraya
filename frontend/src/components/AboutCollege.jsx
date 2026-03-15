@@ -1,4 +1,4 @@
-import { Building2, GraduationCap, Award, Users, Globe } from 'lucide-react';
+import { Building2, GraduationCap, Award, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const stats = [
@@ -21,30 +21,34 @@ const AboutCollege = () => {
                 An Institution <br />of <span className="text-blue-500 italic font-serif">Excellence&apos;.</span>
               </h2>
               <p className="text-gray-400 text-lg max-w-md leading-relaxed">
-                Since 1960, NSSCE Palakkad has been the incubator for India's brightest engineering minds.
+                Since 1960, NSS College OF Engineering,Palakkad has been the incubator for India&apos;s brightest engineering minds.
                 Spanning 125 acres of innovation and technical excellence.
               </p>
             </div>
-            <div className="mt-12 flex gap-4 relative z-10">
-              <button className="px-6 py-3 bg-white text-black font-bold rounded-full text-sm hover:scale-105 transition-transform">Campus Tour</button>
-              <button className="px-6 py-3 bg-white/5 text-white font-bold rounded-full text-sm border border-white/10 hover:bg-white/10 transition-colors">Read History</button>
-            </div>
+            
             {/* Visual background element */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] group-hover:bg-blue-500/10 transition-colors" />
           </div>
 
           {/* College Photo Card */}
           <div className="md:col-span-5 relative group overflow-hidden rounded-[3rem] border border-white/5 min-h-[400px]">
-            <img
-              src="/IMG_4230.png"
-              alt="NSSCE Campus"
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
-            <div className="absolute bottom-8 left-8">
-              <p className="text-white/60 text-xs font-black uppercase tracking-[0.3em]">NSSCE Palakkad</p>
-              <h4 className="text-white text-2xl font-bold">125 Acres of Greenery</h4>
-            </div>
+            <a 
+              href="https://www.nssce.ac.in/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block w-full h-full absolute inset-0 group"
+            >
+              <img
+                src="/IMG_4230.png"
+                alt="NSSCE Campus"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+              <div className="absolute bottom-8 left-8">
+                <p className="text-white/60 text-xs font-black uppercase tracking-[0.3em]">NSSCE Palakkad</p>
+                <h4 className="text-white text-2xl font-bold">125 Acres of Greenery</h4>
+              </div>
+            </a>
           </div>
 
           {/* Stats Grid - Full Width */}
@@ -67,6 +71,7 @@ const AboutCollege = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

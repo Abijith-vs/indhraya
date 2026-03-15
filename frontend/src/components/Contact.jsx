@@ -16,7 +16,7 @@ const Contact = () => {
             </h2>
           </div>
           <p className="text-gray-400 text-lg max-w-xs font-light leading-tight pb-2">
-            Whether it's a query or a suggestion, we're here to listen and grow together.
+            Whether it&apos;s a query or a suggestion, we&apos;re here to listen and grow together.
           </p>
         </div>
 
@@ -46,9 +46,13 @@ const Contact = () => {
               Open in Maps <ArrowUpRight size={18} />
             </motion.a>
 
-            {/* Subtle Map visual placeholder */}
-            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 grayscale group-hover:opacity-20 transition-opacity">
-              <div className="w-full h-full bg-[url('/campus_map_texture.jpg')] bg-cover" />
+            {/* College campus image */}
+            <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 grayscale group-hover:opacity-50 group-hover:grayscale-0 transition-all duration-300">
+              <img 
+                src="/IMG_4230.png" 
+                alt="NSS College of Engineering Campus" 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </motion.div>
 
@@ -79,7 +83,17 @@ const Contact = () => {
               </div>
             </motion.div>
 
-
+            {/* Email Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-zinc-900 border border-white/5 rounded-[2.5rem] p-8 flex-1 group"
+            >
+              <Mail className="text-blue-500 mb-4 group-hover:scale-110 transition-transform" size={20} />
+              <h4 className="text-white font-bold text-xl mb-4">Union Email</h4>
+              <p className="text-gray-400 text-sm font-medium">nssceunion@gmail.com</p>
+            </motion.div>
           </div>
         </div>
 
@@ -87,9 +101,9 @@ const Contact = () => {
         <div className="mt-20 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex gap-4">
             {[
-              { icon: Instagram, href: '#', label: '' },
-              { icon: Facebook, href: '#', label: '' },
-              { icon: Youtube, href: '#', label: '' }
+              { icon: Facebook, href: 'https://facebook.com/nssceunion', label: 'Facebook' },
+              { icon: Instagram, href: 'https://instagram.com/nssceunion', label: 'Instagram' },
+              { icon: Youtube, href: 'https://youtube.com/@nssceunion', label: 'YouTube' },
             ].map((social, i) => (
               <motion.a
                 key={i}

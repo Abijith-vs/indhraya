@@ -16,31 +16,20 @@ import './App.css';
 function App() {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-      <Router>
+    <Router>
         <div className="bg-gray-900 min-h-screen text-gray-100 font-sans">
+          <Navbar />
           <Routes>
-            <Route path="/*" element={
+            <Route path="/" element={
               <>
-                <Navbar />
-                <Routes>
-                  <Route path="/" element={
-                    <>
-                      <Hero />
-                      <AboutUnion />
-
-
-                      <AboutCollege />
-                      <UpcomingEvents />
-
-                      <Gallery />
-                      <ComplaintForm />
-                      <Announcements />
-
-
-                      <Contact />
-                    </>
-                  } />
-                </Routes>
+                <Hero />
+                <AboutUnion />
+                <AboutCollege />
+                <UpcomingEvents />
+                <Gallery />
+                <ComplaintForm />
+                <Announcements />
+                <Contact />
               </>
             } />
           </Routes>

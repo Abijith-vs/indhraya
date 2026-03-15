@@ -20,7 +20,6 @@ const leadership = [
 ];
 
 const AboutUnionComp = memo(() => {
-  AboutUnionComp.displayName = 'AboutUnion';
 
   const groupedLeadership = useMemo(() => {
     const groups = {};
@@ -128,4 +127,3 @@ const AboutUnionComp = memo(() => {
 AboutUnionComp.displayName = 'AboutUnion';
 
 export default AboutUnionComp;
-

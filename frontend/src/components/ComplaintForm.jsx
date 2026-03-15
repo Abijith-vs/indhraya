@@ -61,7 +61,7 @@ const ComplaintForm = () => {
           >
             <AnimatePresence mode="wait">
               {!submitted ? (
-                  <motion.form
+                <motion.form
                   key="form"
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                   className="space-y-6"
@@ -70,7 +70,7 @@ const ComplaintForm = () => {
                     setLoading(true);
                     setError('');
                     try {
-// Email submission redirect
+                      // Email submission redirect
                       const unionEmail = 'collegeunionnssce2026@gmail.com';
                       const subject = `Student Complaint from ${formData.name || 'Anonymous'}`;
                       let body = `Register Number: ${formData.registerNumber}\n\nDepartment: ${formData.department}\n\nGrievance:\n${formData.description}`;
@@ -185,8 +185,16 @@ const ComplaintForm = () => {
                     <CheckCircle2 className="text-emerald-500 w-10 h-10" />
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-2">Message Logged</h3>
-                  <p className="text-gray-400 max-w-xs mx-auto">We've received your voice. We'll be in touch through your registered college email.</p>
-                  <button onClick={() => setSubmitted(false)} className="mt-12 text-rose-500 font-bold hover:underline">Submit another one</button>
+                  <p className="text-gray-400 max-w-xs mx-auto">We&apos;ve received your voice. We&apos;ll be in touch through your registered college email.</p>
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({ name: '', registerNumber: '', department: '', description: '', file: null });
+                    }}
+                    className="mt-8 text-rose-500 font-bold hover:underline"
+                  >
+                    Submit another one
+                  </button>
                 </motion.div>
               )}
             </AnimatePresence>

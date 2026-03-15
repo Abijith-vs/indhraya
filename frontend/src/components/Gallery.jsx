@@ -37,7 +37,7 @@ const Gallery = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 whileHover={{ y: -10 }}
-                className="relative rounded-[2rem] overflow-hidden group cursor-none"
+                className="relative rounded-[2rem] overflow-hidden group"
               >
                 <img
                   src={`${API_BASE_URL}${image.imageUrl}`}

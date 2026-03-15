@@ -72,7 +72,22 @@ const Hero = () => {
                     Together We Rise
                 </motion.p>
 
-                {/* Elegant Buttons */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex flex-wrap gap-4"
+                >
+                    <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
+                        Explore Union <ArrowRight size={20} />
+                    </button>
+                    <button
+                        onClick={() => document.getElementById('complaints')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full border border-white/10 backdrop-blur-sm transition-all transform hover:scale-105 active:scale-95"
+                    >
+                        Voice Grievance
+                    </button>
+                </motion.div>
 
             </div>
 
