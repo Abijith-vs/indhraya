@@ -70,15 +70,15 @@ const ComplaintForm = () => {
                     setLoading(true);
                     setError('');
                     try {
-                      // TODO: Implement email submission or backend POST here
-                      console.log('Complaint data (placeholder):', {
-                        name: formData.name,
-                        registerNumber: formData.registerNumber,
-                        department: formData.department,
-                        description: formData.description,
-                        file: formData.file?.name || null,
-                        timestamp: new Date().toISOString()
-                      });
+// Email submission redirect
+                      const unionEmail = 'collegeunionnssce2026@gmail.com';
+                      const subject = `Student Complaint from ${formData.name || 'Anonymous'}`;
+                      let body = `Register Number: ${formData.registerNumber}\n\nDepartment: ${formData.department}\n\nGrievance:\n${formData.description}`;
+                      if (formData.file) {
+                        body += `\n\nSupporting file: ${formData.file.name} (please attach manually)`;
+                      }
+                      const mailtoLink = `mailto:${unionEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                      window.location.href = mailtoLink;
                       setSubmitted(true);
                     } catch (err) {
                       console.error(err);
